@@ -565,7 +565,7 @@ sub tokenize_sql
 
     my $re = qr{
         (
-		(?:\\(?:copyright|errverbose|gx|gexec|gset|gdesc|q|crosstabview|watch|\?|copy|qecho|echo|if|elif|else|endif|edit|ir|include_relative|include|warn|write|html|print|out|ef|ev|h|H|i|p|r|s|w|o|e|g|q|d(?:[aAbcCdDeEfFgilLmnoOpPrRstTuvwxy+]{0,3})?|l\+?|sf\+?|sv\+?|z|a|C|f|H|t|T|x|c|pset|connect|encoding|password|conninfo|cd|setenv|timing|prompt|reset|set|unset|lo_export|lo_import|lo_list|lo_unlink|\!))(?:$|[\n]|[\ \t](?:(?!\\(?:\\|pset|reset|connect|encoding|password|conninfo|cd|setenv|timing|prompt|set|unset|lo_export|lo_import|lo_list|lo_unlink|\!|copy|qecho|echo|edit|html|include_relative|include|print|out|warn|watch|write|q))[\ \t\S])*)        # psql meta-command
+		(?:\\(?:copyright|errverbose|gx|gexec|gset|gdesc|q|crosstabview|watch|\?|copy|qecho|echo|if|elif|else|endif|edit|ir|include_relative|include|warn|write|html|print|out|ef|ev|h|H|i|p|r|s|w|o|e|g|q|d(?:[aAbcCdDeEfFgilLmnoOpPrRstTuvwxy+]{0,3})?|l\+?|sf\+?|sv\+?|z|a|C|f|H|t|T|x|c|pset|connect|encoding|password|conninfo|cd|getenv|setenv|timing|prompt|reset|set|unset|lo_export|lo_import|lo_list|lo_unlink|\!))(?:$|[\n]|[\ \t](?:(?!\\(?:\\|pset|reset|connect|encoding|password|conninfo|cd|setenv|timing|prompt|set|unset|lo_export|lo_import|lo_list|lo_unlink|\!|copy|qecho|echo|edit|html|include_relative|include|print|out|warn|watch|write|q))[\ \t\S])*)        # psql meta-command
 		|
 		AAKEYWCONST\d+AA(?:\s+AAKEYWCONST\d+AA)+             # preserved multiple constants with newline
 		|
